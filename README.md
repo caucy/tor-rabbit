@@ -3,6 +3,8 @@ using tornado to recive message, and send message to rabbitmq
 
 use blocking client ,because the cliend can not keep connect ,so every handle must connect to rabbitmq ,
 
+使用rabbitmq的client做全局连接，传递到request中去，会出现时间长，断开连接的情况，这里没使用异步方式，使用的是类似每个request实例化一个session连接的方式
+
 normal computer to test,
 
 Concurrency Level:      10
